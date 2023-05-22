@@ -6,7 +6,7 @@ function renderQrcode() {
 
   // Simple operation
   // const qr0 = QRC.encodeText("Hello, world!", QRC.Ecc.MEDIUM);
-  const bin = [0x41, 0x6C, 0x6C, 0xA7];
+  const bin = [0x41, 0x6C, 0x6C, 0xA7, 0x00, 0xC3, 0xF7, 0x00, 0x03];
   const ecl = QRC.Ecc.MEDIUM;
   const qr0 = QRC.encodeBinary(bin, ecl);
   const svg = toSvgString(qr0, 4, "white", "black");  // See qrcodegen-input-demo
