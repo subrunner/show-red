@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Show Red</title>
+  <!--qr code generating-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+</head>
+
+<body>
+  <h1>QR Code</h1>
+  <textarea id="textContent" rows="20" cols="50">
+
+</textarea>
+  <button onclick="renderQrcode()">Render code</button>
+  <canvas id="qrcode-2"></canvas>
+  <script type="text/javascript">
+    function renderQrcode() {
+      var content = document.getElementById("textContent").value;
+      alert("Rendering content: " + content);
+      var qrcode = new QRious({
+        element: document.getElementById("qrcode-2"),
+        background: '#ffffff',
+        backgroundAlpha: 1,
+        foreground: '#5868bf',
+        foregroundAlpha: 1,
+        level: 'H',
+        padding: 0,
+        size: 512,
+        value: content
+      });
+    }
+  </script>
+</body>
