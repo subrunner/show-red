@@ -44,7 +44,7 @@
               // scannable, rest shaded.
             },
             (decodedText, decodedResult) => {     // do something when code is read. For example:
-              console.log(`QR Code detected: ${decodedText}`);
+              console.log(`QR Code detected: ${decodedText}`, decodedResult);
               html5QrCode.stop().then(() => {
                 alert("stopped scanning. Found " + decodedText);
               })
